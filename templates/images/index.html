@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="container">
+  <div class="bg-light p-5 rounded">
+    <h1>My social web </h1>
+    {% if user.is_authenticated %}
+    <p class="lead">Welcome, {{ user.username }} !</p>
+    <p class="lead"><a href="{% url 'account_reset_password' %}" >You can resetpassword</a></p> 
+    <p class="lead"><a href="{% url 'account_email' %}" >Change Email</a></p> or
+    <p class="lead"></p><a href="{% url 'account_logout' %}" >Log out</a></p>
+    {% else %}
+    <p class="lead"><a href="{% url 'account_login' %}" >Login</a></p>
+    <p class="lead"><a href="{% url 'account_signup' %}" >SIgnup</a></p>
+    {% endif %}
+  </div>
+</main>
+
+{% endblock %}
