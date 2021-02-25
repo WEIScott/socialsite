@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     #added apps
-    'images',
+    'images.apps.ImagesConfig',
     # The following apps are required:
     'django.contrib.sites',
     'allauth',
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.weixin',
+
+    'django_extensions',
 
     'django.contrib.admin',
     'django.contrib.auth',
